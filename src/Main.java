@@ -1,5 +1,10 @@
+import students.GryffindorStudent;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        GryffindorStudent harryPotter = new GryffindorStudent("Harry", 100, 100,100, 100, 100);
+       GryffindorStudent hermioneGranger = new GryffindorStudent("Гермиона", 99, 99,99,99, 99);
+       harryPotter.compare(hermioneGranger);
+
     }
 }
