@@ -26,4 +26,22 @@ public class ravenStudent extends hogwartsStudent{
                 ", transgressionDistance=" + transgressionDistance +
                 '}';
     }
+
+    @Override
+    public int calculatedSpecialAbilitiesSum() {
+        return smart + wise + witty + creative;
+    }
+
+    public void compare(ravenStudent ravenStudent) {
+        int sum1 = calculatedSpecialAbilitiesSum();
+        int sum2 =  ravenStudent.calculatedSpecialAbilitiesSum();
+
+        if(sum1 > sum2) {
+            System.out.println(name + " лучший Когтевранец, чем " + ravenStudent);
+        }else if (sum1 < sum2) {
+            System.out.println(ravenStudent.getName() + " лучший Когтевранец, чем " + name);
+        }else {
+            System.out.println(name + " и " + ravenStudent.getName() + " оба крутые Когтевранцы");
+        }
+    }
 }

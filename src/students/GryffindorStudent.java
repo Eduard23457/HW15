@@ -37,9 +37,14 @@ public class GryffindorStudent extends hogwartsStudent {
                 '}';
     }
 
+    @Override
+    public int calculatedSpecialAbilitiesSum() {
+        return nobility + honor + bravery;
+    }
+
     public void compare(GryffindorStudent gryffindorStudent) {
-        int sum1 = this.nobility + this.honor + this.bravery;
-        int sum2 = gryffindorStudent.getNobility() + gryffindorStudent.getHonor() + gryffindorStudent.getBravery();
+        int sum1 = calculatedSpecialAbilitiesSum();
+        int sum2 =  gryffindorStudent.calculatedSpecialAbilitiesSum();
 
         if(sum1 > sum2) {
             System.out.println(name + " лучший Грифиндоровец, чем " + gryffindorStudent.getName());
@@ -49,5 +54,7 @@ public class GryffindorStudent extends hogwartsStudent {
             System.out.println(name + " и " + gryffindorStudent.getName() + " оба крутые");
         }
     }
+
+
 }
 

@@ -30,4 +30,22 @@ public class slytherin extends hogwartsStudent{
                 ", transgressionDistance=" + transgressionDistance +
                 '}';
     }
+
+    @Override
+    public int calculatedSpecialAbilitiesSum() {
+        return cunning + determination + ambition + resourcefulness + lustForPower;
+    }
+
+    public void compare(slytherin slytherin) {
+        int sum1 = calculatedSpecialAbilitiesSum();
+        int sum2 =  slytherin.calculatedSpecialAbilitiesSum();
+
+        if(sum1 > sum2) {
+            System.out.println(name + " лучший Слизеринец, чем " + slytherin);
+        }else if (sum1 < sum2) {
+            System.out.println(slytherin.getName() + " лучший Слизеринец, чем " + name);
+        }else {
+            System.out.println(name + " и " + slytherin.getName() + " оба крутые Слизеринца");
+        }
+    }
 }
